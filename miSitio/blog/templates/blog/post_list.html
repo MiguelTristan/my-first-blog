@@ -12,7 +12,21 @@
             Materiales y Aceros
         </h1>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti aspernatur ad ducimus animi, officia facere necessitatibus est eos libero esse, omnis, nesciunt quibusdam possimus in aliquam ut nam vero voluptas.
+            {% for post in posts %}
+            <div>
+                <p>
+                    Published: {{post.published_date}}
+                </p>
+                <h1>
+                    <a href="">
+                        {{post.title}}
+                    </a>
+                </h1>
+                <p>
+                    {{post.text | linebreaksbr}}
+                </p>
+            </div>
+            {% endfor %}
         </p>
     </body>
 </html>
